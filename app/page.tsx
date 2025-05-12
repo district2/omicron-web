@@ -54,7 +54,7 @@ export default function Home() {
 				</div>
 				<div className="flex items-center flex-col gap-y-10">
 					<h1 className="text-center text-2xl font-bold md:text-3xl font-[family-name:var(--font-geist-sans)]">
-						Soluzioni tecnologiche all'avanguardia
+						Soluzioni tecnologiche all&apos;avanguardia
 					</h1>
 					<div className="flex gap-14 justify-center flex-wrap">
 						<Solution

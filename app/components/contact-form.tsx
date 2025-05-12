@@ -71,7 +71,8 @@ export default function ContactForm() {
 			console.error("Form submission error", error);
 			toast.error(
 				<p className="font-[family-name:var(--font-geist-sans)] text-red-600 p-2">
-					C'è stato un errore durante il processo, per favore riprova più tardi
+					C&apos;è stato un errore durante il processo, per favore riprova più
+					tardi
 				</p>,
 				{ icon: <XIcon />, closeButton: true },
 			);
@@ -137,7 +138,7 @@ export default function ContactForm() {
 								</SelectContent>
 							</Select>
 							<FormDescription>
-								Quale zona vuoi coprire con l'impianto di allarme?
+								Quale zona vuoi coprire con l&apos;impianto di allarme?
 							</FormDescription>
 							<FormMessage />
 						</FormItem>
@@ -206,7 +207,7 @@ export default function ContactForm() {
 								/>
 							</FormControl>
 							<FormDescription>
-								Quante porte e/o finestre devi collegare all'impianto?
+								Quante porte e/o finestre devi collegare all&apos;impianto?
 								(opzionale)
 							</FormDescription>
 							<FormMessage />
@@ -264,7 +265,7 @@ export default function ContactForm() {
 										</SelectContent>
 									</Select>
 									<FormDescription>
-										Seleziona la provincia dov'è situata la struttura
+										Seleziona la provincia dov&apos;è situata la struttura
 									</FormDescription>
 									<FormMessage />
 								</FormItem>
@@ -345,12 +346,12 @@ export default function ContactForm() {
 				/>
 				<FormField
 					name="token"
-					render={(_) => (
+					render={() => (
 						<HCaptcha
 							sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY ?? ""}
 							theme={"dark"}
 							languageOverride="it"
-							onVerify={(token, _) => {
+							onVerify={(token) => {
 								setToken(token);
 								form.setValue("token", token);
 							}}
