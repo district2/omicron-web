@@ -2,7 +2,10 @@ This is a [Next.js](https://nextjs.org) project made for **Omicron Elettronica**
 
 ## Omicron Website
 
-To run the development server:
+Before running the server, you have to set-up your tokens on the **.env.example** file, **removing .example** from the file name when done in order to load it.
+
+
+## To run the development server:
 
 ```bash
 npm run dev
