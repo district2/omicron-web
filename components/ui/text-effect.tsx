@@ -177,8 +177,7 @@ const createVariantsWithTransition = (
 ): Variants => {
 	if (!transition) return baseVariants;
 
-	// biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
-	const { exit: undefined, ...mainTransition } = transition;
+	const { ...mainTransition } = transition;
 
 	return {
 		...baseVariants,
