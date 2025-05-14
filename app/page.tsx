@@ -29,6 +29,7 @@ export default function Home() {
 				<div className="flex w-full justify-center md:justify-evenly flex-wrap gap-4 items-center p-3">
 					<Image
 						src={SurveillanceImage}
+						priority={true}
 						alt="immagine di videosorveglianza"
 						className="hidden md:block grayscale w-1/3 h-auto rounded-2xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
 					/>
