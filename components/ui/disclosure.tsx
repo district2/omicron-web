@@ -128,9 +128,11 @@ export function DisclosureTrigger({
 							},
 							className: cn(
 								className,
-								(child as React.ReactElement).props.className,
+								// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+								((child as React.ReactElement).props as any).className,
 							),
-							...(child as React.ReactElement).props,
+							// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+							...((child as React.ReactElement).props as any).props,
 						})
 					: child;
 			})}
