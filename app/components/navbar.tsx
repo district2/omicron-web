@@ -10,7 +10,6 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Separator } from "@/components/ui/separator";
 import { styleSelectedRoute } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,7 +41,7 @@ export default function Navbar() {
 	return (
 		<div className="mt-36">
 			<MobileMenu />
-			<div className="hidden md:flex justify-evenly items-center fixed top-0 right-0 left-0 z-50 bg-black/85">
+			<div className="hidden md:flex justify-evenly items-center fixed top-0 right-0 left-0 z-50 backdrop-filter backdrop-blur-md border-b border-zinc-900">
 				<Link href={"/"}>
 					<Image
 						className="m-0 p-0"
@@ -56,7 +55,7 @@ export default function Navbar() {
 					orientation="vertical"
 					className="font-[family-name:var(--font-geist-sans)]"
 				>
-					<NavigationMenuList>
+					<NavigationMenuList className="gap-3">
 						<NavigationMenuItem>
 							<Link href="/" legacyBehavior passHref>
 								<NavigationMenuLink
@@ -66,7 +65,6 @@ export default function Navbar() {
 								</NavigationMenuLink>
 							</Link>
 						</NavigationMenuItem>
-						<Separator orientation="vertical" className="h-7" />
 						<NavigationMenuItem>
 							<Link href="/chi-siamo" legacyBehavior passHref>
 								<NavigationMenuLink
@@ -76,7 +74,6 @@ export default function Navbar() {
 								</NavigationMenuLink>
 							</Link>
 						</NavigationMenuItem>
-						<Separator orientation="vertical" className="h-7" />
 						<NavigationMenuItem>
 							<NavigationMenuTrigger className="bg-transparent">
 								Servizi
@@ -93,7 +90,6 @@ export default function Navbar() {
 								))}
 							</NavigationMenuContent>
 						</NavigationMenuItem>
-						<Separator orientation="vertical" className="h-7" />
 						<NavigationMenuItem>
 							<Link href="/contatti" legacyBehavior passHref>
 								<NavigationMenuLink
