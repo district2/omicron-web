@@ -43,7 +43,7 @@ export default function Footer() {
 				</div>
 				<div className="flex flex-col flex-wrap gap-3 items-center flex-1">
 					<h1 className="font-medium text-lg">Social Networks</h1>
-					<div className="flex gap-5 flex-wrap">
+					<div className="flex gap-14 flex-wrap">
 						<Button size={"icon"} variant={"ghost"}>
 							<Link
 								target="_blank"
