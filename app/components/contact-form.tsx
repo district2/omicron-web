@@ -337,8 +337,7 @@ export default function ContactForm() {
 								/>
 							</FormControl>
 							<FormDescription>
-								Puoi darci qualche informazione in più se desideri, questo campo
-								è opzionale
+								Puoi darci qualche informazione in più se desideri (opzionale)
 							</FormDescription>
 							<FormMessage />
 						</FormItem>
