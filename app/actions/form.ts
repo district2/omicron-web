@@ -7,7 +7,7 @@ import { verify } from "hcaptcha";
 
 export async function sendForm(values: z.infer<typeof formSchema>) {
 	const SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY;
-	if (!SECRET_KEY) return Error("Secret key not specified");
+	if (!SECRET_KEY) return console.log("hcaptcha secret key not specified");
 
 	verify(SECRET_KEY, values.token)
 		.then((response) => {
