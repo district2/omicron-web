@@ -44,7 +44,7 @@ export default function Footer() {
 				<div className="flex flex-col flex-wrap gap-3 items-center flex-1">
 					<h1 className="font-medium text-lg">Social Networks</h1>
 					<div className="flex gap-14 flex-wrap">
-						<Button size={"icon"} variant={"ghost"}>
+						<Button size={"icon"} variant={"ghost"} className="h-auto w-auto">
 							<Link
 								target="_blank"
 								href={
@@ -54,12 +54,12 @@ export default function Footer() {
 								<Image
 									src={"/facebook.svg"}
 									alt="facebook logo"
-									width={32}
-									height={32}
+									width={48}
+									height={48}
 								/>
 							</Link>
 						</Button>
-						<Button size={"icon"} variant={"ghost"}>
+						<Button size={"icon"} variant={"ghost"} className="h-auto w-auto">
 							<Link
 								target="_blank"
 								href={"https://api.whatsapp.com/send?phone=393351013812"}
@@ -67,8 +67,8 @@ export default function Footer() {
 								<Image
 									src={"/whatsapp.svg"}
 									alt="whatsapp logo"
-									width={32}
-									height={32}
+									width={48}
+									height={48}
 								/>
 							</Link>
 						</Button>
