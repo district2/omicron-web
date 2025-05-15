@@ -6,13 +6,12 @@ import type { z } from "zod";
 import { verify } from "hcaptcha";
 
 export async function sendForm(values: z.infer<typeof formSchema>) {
-	console.log(values.token);
 	const SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY;
 	if (!SECRET_KEY) return Error("Secret key not specified");
 
 	verify(SECRET_KEY, values.token)
 		.then((response) => {
-			if (response.success === true)
+			if (response.success === true) {
 				sendTelegramMessage({
 					message: `Nuovo preventivo da parte di *${escapeMW(values.anagrafica)}*\n
                 Provincia: *${values.provincia}*\n
@@ -31,7 +30,8 @@ export async function sendForm(values: z.infer<typeof formSchema>) {
 										: ""
 								}`,
 				});
-			else
+				console.log("Message sent succesfully");
+			} else
 				return Error(
 					"Qualcosa è andato storto durante la verifica del captcha token",
 				);
