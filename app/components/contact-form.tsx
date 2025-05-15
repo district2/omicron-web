@@ -28,6 +28,7 @@ import { formSchema } from "@/lib/schemas/form";
 import type { z } from "zod";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const province = [
 	"Agrigento",
@@ -44,6 +45,8 @@ const province = [
 export default function ContactForm() {
 	const [token, setToken] = useState("");
 	const captchaRef = useRef<HCaptcha>(null);
+	const formRef = useRef<HTMLFormElement>(null);
+	const router = useRouter();
 
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
@@ -55,6 +58,7 @@ export default function ContactForm() {
 
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		(captchaRef.current as HCaptcha).resetCaptcha();
+		setToken("");
 
 		try {
 			sendForm(values);
@@ -77,6 +81,7 @@ export default function ContactForm() {
 				{ icon: <XIcon />, closeButton: true },
 			);
 		}
+		router.push("/");
 	}
 
 	return (
@@ -84,6 +89,7 @@ export default function ContactForm() {
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
 				className="space-y-4 max-w-3xl mx-auto py-10 px-4"
+				ref={formRef}
 			>
 				<FormField
 					control={form.control}
