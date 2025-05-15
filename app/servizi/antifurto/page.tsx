@@ -1,6 +1,6 @@
 export default function Antifurto() {
 	return (
-		<div className="min-h-screen font-[family-name:var(--font-geist-sans)] p">
+		<div className="min-h-screen">
 			<div className="flex flex-col gap-8 items-center px-8 text-center">
 				<div className="flex flex-col gap-3">
 					<h1 className="font-bold text-5xl md:text-7xl">Antifurto</h1>

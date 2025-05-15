@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Contatti() {
 	return (
-		<div className="flex flex-col items-center font-[family-name:var(--font-geist-sans)] pt-10 p-5">
+		<div className="flex flex-col items-center pt-10 p-5">
 			<div className="flex justify-center gap-8 items-center flex-wrap">
 				<div className="flex items-center justify-center flex-col gap-y-5 w-full mx-2">
 					<h1 className="text-2xl md:text-3xl font-bold">Contattaci</h1>

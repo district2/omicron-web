@@ -39,7 +39,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={`${geistSans.variable} antialiased`}>
+			<body className={`${geistSans.className} antialiased`}>
 				<ThemeProvider forcedTheme="dark" attribute={"class"}>
 					<Navbar />
 					{children}

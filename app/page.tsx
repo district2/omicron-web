@@ -10,7 +10,7 @@ export default function Home() {
 	return (
 		<div className="flex flex-col justify-center items-center gap-y-14 pb-28">
 			<div className="flex flex-col gap-y-32 items-center pt-10">
-				<h1 className="font-[family-name:var(--font-geist-sans)] font-bold text-4xl md:text-7xl tracking-wide text-center">
+				<h1 className="font-bold text-4xl md:text-7xl tracking-wide text-center">
 					Esperti <br />
 					In <br />
 					{""}
@@ -34,7 +34,7 @@ export default function Home() {
 						className="hidden md:block grayscale w-1/3 h-auto rounded-2xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
 					/>
 
-					<h2 className="max-w-lg text-xl md:text-2xl text-center md:text-left text-wrap font-[family-name:var(--font-geist-sans)]">
+					<h2 className="max-w-lg text-xl md:text-2xl text-center md:text-left text-wrap">
 						Dal 1991 eroghiamo servizi per la progettazione ed installazione di
 						sistemi tecnologici di sicurezza, in particolare di antifurti per
 						aziende di produzione, attività commerciali, uffici, banche, case.
@@ -47,14 +47,14 @@ export default function Home() {
 						className="hidden md:block grayscale w-1/3 h-auto rounded-2xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]"
 					/>
 					<div className="flex flex-col gap-y-6 items-center">
-						<h1 className="text-2xl lg:text-4xl font-bold font-[family-name:var(--font-geist-sans)">
+						<h1 className="text-2xl lg:text-4xl font-bold">
 							<CustomersCounter />
 						</h1>
 						<CustomersSlider />
 					</div>
 				</div>
 				<div className="flex items-center flex-col gap-y-10">
-					<h1 className="text-center text-2xl font-bold md:text-3xl font-[family-name:var(--font-geist-sans)]">
+					<h1 className="text-center text-2xl font-bold md:text-3xl">
 						Soluzioni tecnologiche all&apos;avanguardia
 					</h1>
 					<div className="flex gap-14 justify-center flex-wrap">

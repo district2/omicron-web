@@ -59,7 +59,7 @@ export default function ContactForm() {
 		try {
 			sendForm(values);
 			toast(
-				<p className="font-[family-name:var(--font-geist-sans)] p-2">
+				<p className="p-2">
 					Richiesta inviata con successo, ti ricontatteremo appena possibile
 				</p>,
 				{
@@ -70,7 +70,7 @@ export default function ContactForm() {
 		} catch (error) {
 			console.error("Form submission error", error);
 			toast.error(
-				<p className="font-[family-name:var(--font-geist-sans)] text-red-600 p-2">
+				<p className="text-red-600 p-2">
 					C&apos;è stato un errore durante il processo, per favore riprova più
 					tardi
 				</p>,

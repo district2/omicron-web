@@ -51,10 +51,7 @@ export default function Navbar() {
 						alt="Omicron logo"
 					/>
 				</Link>
-				<NavigationMenu
-					orientation="vertical"
-					className="font-[family-name:var(--font-geist-sans)]"
-				>
+				<NavigationMenu orientation="vertical">
 					<NavigationMenuList className="gap-3">
 						<NavigationMenuItem>
 							<Link href="/" legacyBehavior passHref>
@@ -103,10 +100,7 @@ export default function Navbar() {
 				</NavigationMenu>
 				<div className="relative">
 					<Link href={"/preventivo"}>
-						<Button
-							variant="outline"
-							className="font-[family-name:--font-geist-sans] font-bold bg-transparent"
-						>
+						<Button variant="outline" className="font-bold bg-transparent">
 							Ottieni un preventivo
 						</Button>
 					</Link>
