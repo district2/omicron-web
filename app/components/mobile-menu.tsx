@@ -40,7 +40,7 @@ export default function MobileMenu() {
 					/>
 				</Link>
 				<Sheet open={isOpen} onOpenChange={setOpen}>
-					<SheetTrigger asChild>
+					<SheetTrigger asChild aria-label="Icon to open menu with all routes">
 						<Hamburger toggled={isOpen} toggle={setOpen} />
 					</SheetTrigger>
 					<SheetContent side="left" className="flex flex-col gap-6">
