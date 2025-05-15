@@ -30,11 +30,8 @@ export async function sendForm(values: z.infer<typeof formSchema>) {
 										: ""
 								}`,
 				});
-				console.log("Message sent succesfully");
-			} else
-				return Error(
-					"Qualcosa è andato storto durante la verifica del captcha token",
-				);
+				console.log("message sent successfully");
+			} else console.log("something went wrong during captcha verification");
 		})
 		.catch(console.error);
 }
