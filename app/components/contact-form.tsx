@@ -351,6 +351,7 @@ export default function ContactForm() {
 							sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY ?? ""}
 							theme={"dark"}
 							languageOverride="it"
+							loadAsync={true}
 							onVerify={(token) => {
 								setToken(token);
 								form.setValue("token", token);
