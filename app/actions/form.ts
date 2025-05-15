@@ -9,7 +9,7 @@ export async function sendForm(values: z.infer<typeof formSchema>) {
 	const SECRET_KEY = process.env.HCAPTCHA_SECRET_KEY;
 	if (!SECRET_KEY) return console.log("hcaptcha secret key not specified");
 
-	verify(SECRET_KEY, values.token)
+	await verify(SECRET_KEY, values.token)
 		.then((response) => {
 			if (response.success === true) {
 				sendTelegramMessage({
@@ -31,7 +31,7 @@ export async function sendForm(values: z.infer<typeof formSchema>) {
 								}`,
 				});
 				console.log("message sent successfully");
-			} else console.log("something went wrong during captcha verification");
+			} else console.log("something went wrong during captcha validation");
 		})
 		.catch(console.error);
 }
