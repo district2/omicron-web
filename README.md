@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project made for **Omicron Elettronica**, the company I'm employed for.
+This is a [Next.js](https://nextjs.org) project made for **Omicron Elettronica**, the company I was employed for.
 
 ## Omicron Website
 
